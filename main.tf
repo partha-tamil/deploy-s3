@@ -1,3 +1,12 @@
+terraform {
+  cloud {
+    organization = "partha_iac"
+    workspaces {
+      name = "deploy-s3"
+    }
+  }
+}
+
 provider "aws" {
   region = var.region
 }
